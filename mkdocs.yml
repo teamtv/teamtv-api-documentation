@@ -14,7 +14,7 @@ nav:
     - SportingEvent: backend_api/sporting_event.md
     - EventStream: backend_api/event_stream.md
     - Studio: backend_api/studio.md
-    #- vMix: backend_api/vmix.md
+    - vMix: backend_api/vmix.md
     - Tokens: backend_api/tokens.md
   - Embedding: embedding.md
   - Frontend API: frontend_api.md
