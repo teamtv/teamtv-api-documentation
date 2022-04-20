@@ -4,17 +4,19 @@ site_name: TeamTV Api
 google_analytics: null
 
 theme:
-  name: readthedocs
+  name: material
 
 nav:
   - Home: index.md
   - Backend API:
     - Intro/Authentication: backend_api/intro.md
-    - ResourceGroup: backend_api/resource_group.md
-    - SportingEvent: backend_api/sporting_event.md
-    - EventStream: backend_api/event_stream.md
-    - Studio: backend_api/studio.md
-    - vMix: backend_api/vmix.md
+    - Resources:
+      - ResourceGroup: backend_api/resource_group.md
+      - SportingEvent: backend_api/sporting_event.md
+    - Integrations:
+      - EventStream: backend_api/event_stream.md
+      - Studio: backend_api/studio.md
+      - vMix: backend_api/vmix.md
     - Tokens: backend_api/tokens.md
   - Embedding: embedding.md
   - Frontend API: frontend_api.md

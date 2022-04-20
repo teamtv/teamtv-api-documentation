@@ -6,7 +6,7 @@ Get highlight videos
 
 ```javascript
 token = get(
-   `https://ttv-platform.herokuapp.com/api/studio/highlightVideos`,
+   `https://api.teamtvsport.com/api/studio/highlightVideos`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
@@ -62,7 +62,7 @@ Get livestreamEvents
 **Request**
 ```javascript
 token = get(
-   `https://ttv-platform.herokuapp.com/api/studio/livestreamEvent`,
+   `https://api.teamtvsport.com/api/studio/livestreamEvent`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,

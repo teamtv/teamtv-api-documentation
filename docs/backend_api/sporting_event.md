@@ -3,7 +3,7 @@
 ### Create new SportingEvent
 ```javascript
 sportingEvent = post(
-   "https://ttv-platform.herokuapp.com/api/sportingEvents",
+   "https://api.teamtvsport.com/api/sportingEvents",
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
@@ -22,7 +22,7 @@ The `sportingEventId` field in the returned `sportingEvent` object is required f
 
 ```javascript
 livestreamEvent = post(
-   `https://ttv-platform.herokuapp.com/api/sportingEvents/${sportingEventId}/createLivestreamEvent`,
+   `https://api.teamtvsport.com/api/sportingEvents/${sportingEventId}/createLivestreamEvent`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
@@ -70,7 +70,7 @@ In case you would like to trigger the upload before the 30 minutes delay, you ca
 
 ```javascript
 post(
-   `https://ttv-platform.herokuapp.com/livestreaming/livestreamEvents/${livestreamEventId}/stop`,
+   `https://api.teamtvsport.com/livestreaming/livestreamEvents/${livestreamEventId}/stop`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,

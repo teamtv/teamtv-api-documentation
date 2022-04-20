@@ -11,7 +11,7 @@ Each request to the TeamTV API **must** contain a the `X-Resource-Group-ID` head
 **Request**
 ```javascript
 resourceGroup = post(
-   "https://ttv-platform.herokuapp.com/api/resourceGroups",
+   "https://api.teamtvsport.com/api/resourceGroups",
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
@@ -48,7 +48,7 @@ The `resourceGroupId` field in the returned `resourceGroup` object is the `teamR
 
 ```javascript
 resourceGroup = get(
-   "https://ttv-platform.herokuapp.com/api/resourceGroups",
+   "https://api.teamtvsport.com/api/resourceGroups",
    headers={
       "Authorization": `Bearer ${API_TOKEN}`,
       "X-Resource-Group-Id": clubResourceGroupId

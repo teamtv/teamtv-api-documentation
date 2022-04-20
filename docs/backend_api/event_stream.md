@@ -12,7 +12,7 @@ Keep in mind the `eventStreamId` and the id in the endpointUrls are *NOT* the sa
 
 ```javascript
 eventStream = post(
-   `https://ttv-platform.herokuapp.com/api/sportingEvents/${sportingEventId}/eventStreams`,
+   `https://api.teamtvsport.com/api/sportingEvents/${sportingEventId}/eventStreams`,
    headers={
       "Authorization": `Bearer ${API_TOKEN}`,
       "X-Resource-Group-Id": teamResourceGroupId
@@ -26,8 +26,8 @@ eventStream = post(
 {
   "eventStreamId": "11111-22222-33333-4444-555555555",
   "endpointUrls": {
-    "sse": "https:\/\/ttv-live.herokuapp.com\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/subscribe\/sse",
-    "polling": "https:\/\/ttv-live.herokuapp.com\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/list"
+    "sse": "https:\/\/eventstream.teamtv.nl\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/subscribe\/sse",
+    "polling": "https:\/\/eventstream.teamtv.nl\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/list"
   },
   "streamType": "all"
 }
@@ -42,7 +42,7 @@ eventStream = post(
 
 ```javascript
 eventStreams = get(
-   `https://ttv-platform.herokuapp.com/api/sportingEvents/${sportingEventId}/eventStreams`,
+   `https://api.teamtvsport.com/api/sportingEvents/${sportingEventId}/eventStreams`,
    headers={
       "Authorization": `Bearer ${API_TOKEN}`,
       "X-Resource-Group-Id": teamResourceGroupId
@@ -56,8 +56,8 @@ eventStreams = get(
   {
     "eventStreamId": "11111-22222-33333-4444-555555555",
     "endpointUrls": {
-      "sse": "https:\/\/ttv-live.herokuapp.com\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/subscribe\/sse",
-      "polling": "https:\/\/ttv-live.herokuapp.com\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/list"
+      "sse": "https:\/\/eventstream.teamtv.nl\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/subscribe\/sse",
+      "polling": "https:\/\/eventstream.teamtv.nl\/streams\/aaaa-bbbb-cccc-ddddd-eeeeeeee\/list"
     },
     "streamType": "all"
   }

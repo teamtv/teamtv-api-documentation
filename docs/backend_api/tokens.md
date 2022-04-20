@@ -4,7 +4,7 @@ With an admin API Token you can request new API tokens with limited access. Usin
 
 ```javascript
 token = post(
-   `https://ttv-platform.herokuapp.com/api/resourceGroups/${teamResourceGroupId}/createRoleToken`,
+   `https://api.teamtvsport.com/api/resourceGroups/${teamResourceGroupId}/createRoleToken`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
