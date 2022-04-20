@@ -19,7 +19,7 @@ nav:
       - vMix: backend_api/vmix.md
     - Tokens: backend_api/tokens.md
     - Webhooks: webhooks.md
-  - Frontend API: frontend_api.md
+  - Frontend API:
     - Embedding: embedding.md
 
 #  - Frontend API:
