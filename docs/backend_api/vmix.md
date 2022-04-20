@@ -34,26 +34,4 @@ As of 2022-04-15 the following reports are available:
 
 ### Korfball
 
-The korfball report can be fetched by providing `korfball_vmix` as `reportName`. The api will return the following information.
-
-```javascript
-[{"away_attack": "17/66 - 26%",
-  "away_ball_loss": "32%",
-  "away_goals": "17/81 - 21%",
-  "away_rebound": "36/64 - 56%",
-  "away_shot_free_ball": "1/2 - 50%",
-  "away_shot_long": "10/53 - 19%",
-  "away_shot_penalty": "2/2 - 100%",
-  "away_shot_running_in": "1/2 - 50%",
-  "away_shot_short": "3/22 - 14%",
-  "home_attack": "24/66 - 36%",
-  "home_ball_loss": "27%",
-  "home_goals": "24/116 - 21%",
-  "home_rebound": "68/92 - 74%",
-  "home_shot_free_ball": "3/7 - 43%",
-  "home_shot_long": "12/86 - 14%",
-  "home_shot_penalty": "2/5 - 40%",
-  "home_shot_running_in": "1/2 - 50%",
-  "home_shot_short": "6/16 - 38%"}]
-```
-
+The korfball report can be fetched by providing `korfball_vmix` as `reportName`. 
