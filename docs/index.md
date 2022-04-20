@@ -1,3 +1,3 @@
 # TeamTV API docs
 
-Welcome
+Welcome to the TeamTV API documentation.

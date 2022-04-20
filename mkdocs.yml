@@ -18,13 +18,14 @@ nav:
       - Studio: backend_api/studio.md
       - vMix: backend_api/vmix.md
     - Tokens: backend_api/tokens.md
-  - Embedding: embedding.md
+    - Webhooks: webhooks.md
   - Frontend API: frontend_api.md
+    - Embedding: embedding.md
 
 #  - Frontend API:
 #    - Embedding: frontend_api/embedding.md
 #    - Methods: frontend_api/methods.md
-  - Webhooks: webhooks.md
+
 
 #
 #markdown_extensions:
