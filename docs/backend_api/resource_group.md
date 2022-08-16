@@ -117,7 +117,7 @@ resourceGroup = post(
 
 ## Per-Resource ACL
 
-TeamTV allows you to specify per-resource. Some resources within TeamTV are `SportingEven`, `Video`, etc.
+TeamTV allows you to specify per-resource. Some resources within TeamTV are `SportingEvent`, `Video`, etc.
 
 You can disable certain privileges per resource for some specified roles. 
 
@@ -128,7 +128,7 @@ resourceGroup = post(
    `https://api.teamtvsport.com/api/resourceGroups/${resourceGroupId}/setResourceACL`,
    headers={
       "Authorization": `Bearer ${API_TOKEN}`,
-      "X-Resource-Group-Id": teamResourceGroupId
+      "X-Resource-Group-Id": resourceGroupId
    },
    body={
       "resourceId": "sporting-event:11111111-2222-3333-4444-555555555",
@@ -155,7 +155,7 @@ resourceGroup = post(
    `https://api.teamtvsport.com/api/resourceGroups/${resourceGroupId}/setResourceACL`,
    headers={
       "Authorization": `Bearer ${API_TOKEN}`,
-      "X-Resource-Group-Id": teamResourceGroupId
+      "X-Resource-Group-Id": resourceGroupId
    },
    body={
       "resourceId": "sporting-event:11111111-2222-3333-4444-555555555",
