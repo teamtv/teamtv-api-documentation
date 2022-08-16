@@ -82,4 +82,34 @@ resourceGroup = get(
 ]
 ```
 
+## Policy Configuration
 
+The policy of a `ResourceGroup` can be used to change the behaviour regarding privileges of roles and other limits.
+
+### Limit products
+
+When you want to limit the products a `ResourceGroup` has access to you can specify a list of products. The `ResourceGroup` won't have access to any other products. The products a `ResourceGroup` has access to is always limited by the products of a tenant.
+Note: the api does NOT check if the productIds are valid, nor if your tenant has access to those products. 
+
+*Request*
+
+```javascript
+resourceGroup = post(
+   `https://api.teamtvsport.com/api/resourceGroups/${resourceGroupId}/setPolicyConfiguration`,
+   headers={
+      "Authorization": `Bearer ${API_TOKEN}`,
+      "X-Resource-Group-Id": clubResourceGroupId
+   },
+   body={
+      "limits": {
+        "productIds": ["productID1", "productID2"]
+      }  
+   }
+)
+```
+
+
+**Response**
+```json
+"OK"
+```
