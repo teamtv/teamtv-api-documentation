@@ -91,7 +91,7 @@ The policy of a `ResourceGroup` can be used to change the behaviour regarding pr
 When you want to limit the products a `ResourceGroup` has access to you can specify a list of products. The `ResourceGroup` won't have access to any other products. The products a `ResourceGroup` has access to is always limited by the products of a tenant.
 Note: the api does NOT check if the productIds are valid, nor if your tenant has access to those products. 
 
-*Request*
+**Request**
 
 ```javascript
 resourceGroup = post(
@@ -108,6 +108,63 @@ resourceGroup = post(
 )
 ```
 
+
+**Response**
+```json
+"OK"
+```
+
+
+## Per-Resource ACL
+
+TeamTV allows you to specify per-resource. Some resources within TeamTV are `SportingEven`, `Video`, etc.
+
+You can disable certain privileges per resource for some specified roles. 
+
+**Request**
+
+```javascript
+resourceGroup = post(
+   `https://api.teamtvsport.com/api/resourceGroups/${resourceGroupId}/setResourceACL`,
+   headers={
+      "Authorization": `Bearer ${API_TOKEN}`,
+      "X-Resource-Group-Id": teamResourceGroupId
+   },
+   body={
+      "resourceId": "sporting-event:11111111-2222-3333-4444-555555555",
+      "acl": {
+        "actions": ["observe"],
+        "roleNames": ["admin"]
+      }
+   }
+)
+```
+
+**Response**
+```json
+"OK"
+```
+
+You can also omit the `roleNames` argument. When it's omitted all privileges will be removed for other roles.
+
+
+**Request**
+
+```javascript
+resourceGroup = post(
+   `https://api.teamtvsport.com/api/resourceGroups/${resourceGroupId}/setResourceACL`,
+   headers={
+      "Authorization": `Bearer ${API_TOKEN}`,
+      "X-Resource-Group-Id": teamResourceGroupId
+   },
+   body={
+      "resourceId": "sporting-event:11111111-2222-3333-4444-555555555",
+      "acl": {
+        "roleNames": ["admin"]
+      }
+   }
+)
+```
 
 **Response**
 ```json
