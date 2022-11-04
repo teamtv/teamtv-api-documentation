@@ -13,6 +13,7 @@ nav:
     - Resources:
       - ResourceGroup: backend_api/resource_group.md
       - SportingEvent: backend_api/sporting_event.md
+      - Course: backend_api/course.md
     - Integrations:
       - EventStream: backend_api/event_stream.md
       - Studio: backend_api/studio.md
