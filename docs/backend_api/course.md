@@ -1,5 +1,7 @@
 # Course
 
+*Endpoints listed below do not exist yet*
+
 ### List all available courses within your tenant
 
 **Request**
