@@ -1,6 +1,5 @@
 # Course
 
-*Endpoints listed below do not exist yet*
 
 ### List all available courses within your tenant
 
@@ -32,21 +31,22 @@ courses = get(
 ]
 ```
 
-# Class
+# LearningGroup
 
-## Create a new `Class` for a certain `Course`
+## Create a new `LearningGroup` for a certain `Course`
 
 **Request**
 
 ```javascript
 class = post(
-   "https://api.teamtvsport.com/api/course/korfbaltrainer-2/classes",
+   "https://api.teamtvsport.com/api/learningGroups",
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
       "X-Resource-Group-Id": tenantResourceGroupId
    },
    body={
+      "courseId": "korfbaltrainer-2",
       "name": "Korfbal Trainer 2 - 2022/2023 - Dalto",
       "trainees": [
         {
@@ -69,7 +69,7 @@ class = post(
 
 ```json
 {
-  "classId": "cb25959c-c8b8-474a-a84b-5a409fda5519",
+  "learningGroupId": "cb25959c-c8b8-474a-a84b-5a409fda5519",
   "name": "Korfbal Trainer 2 - 2022/2023 - Dalto",
   "tags": {
     "mijnKorfbalId": "18237-123123-123-123"
@@ -77,13 +77,13 @@ class = post(
 }
 ```
 
-## Add a Trainee to a existing Class
+## Add a Trainee to an existing LearningGroup
 
 **Request**
 
 ```javascript
 trainee = post(
-   "https://api.teamtvsport.com/api/course/korfbaltrainer-2/classes/cb25959c-c8b8-474a-a84b-5a409fda5519/trainees",
+   "https://api.teamtvsport.com/api/learningGroups/cb25959c-c8b8-474a-a84b-5a409fda5519/trainees",
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
