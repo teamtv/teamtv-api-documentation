@@ -1,6 +1,6 @@
 # Studio
 
-Get highlight videos
+Get highlight videos. When your token has only access to the club resource group you don't need to pass the `X-Resource-Group-Id` header.
 
 **Request**
 
