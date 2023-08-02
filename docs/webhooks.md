@@ -25,6 +25,22 @@ The VideoAdded event is triggered when an upload is initialized. This means a ne
 }
 ```
 
+
+## Publication.Ready
+
+This event is triggered when the processing at the Channel (CDN, Youtube, Facebook, etc) is done. 
+After this Event the Publication will be returned in the [Studio API](/backend_api/studio/) response.
+
+```javascript
+{
+  "eventName": "Publication.Ready",
+  "data": {
+    "tenantId": "nl_soccer_fc_bal_op_het_dak",
+    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed"
+  }
+}
+```
+
 ## Video.Uploaded
 
 The VideoUploaded event is triggered when all files are successfully uploaded to teamtv. When this event happens the files are queued for encoding.
