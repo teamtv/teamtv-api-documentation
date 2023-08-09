@@ -15,12 +15,15 @@ token = get(
 )
 ```
 
+
+
 **Response**
 ```json
 [
    {
       "createdAt" : "2022-10-20T06:27:36.216502Z",
-      "embedCode" : "<script src=\"https://cdn.jwplayer.com/players/dF60HNMO-IhwLzZyK.js\"></script>",
+      "embedCode" : "<div style=\"position:relative;overflow:hidden;padding-bottom:56.25%\"><iframe src=\"https://cdn.jwplayer.com/players/dF60HNMO-IhwLzZyK.html\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"auto\" title=\"Goal\" style=\"position:absolute;\" allowfullscreen></iframe></div>",
+      "embedUrl": "https://cdn.jwplayer.com/players/dF60HNMO-IhwLzZyK.html",
       "match" : {
          "awayTeam" : {
             "name" : "Racing Bruxelles H1",
