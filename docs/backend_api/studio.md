@@ -42,6 +42,7 @@ token = get(
          "sportingEventId" : "5a8e85d1-1b97-4c60-8b24-1234567c"
       },
       "publicationId" : "ad0a09fa-111d-440f-aae6-1234567d",
+      "publicationType": "vod",
       "resourceGroupId" : "7f880fa6-27f1-11eb-8ff7-1234567c",
       "thumbnailUrl" : "https://cdn.jwplayer.com/thumbs/dF60HNMO-720.jpg",
       "title" : "PC's & Goals Braxgata H1 - Racing H1 2-0"
@@ -69,10 +70,11 @@ token = get(
 [
    {
       "scheduledAt" : "2024-06-10T19:30:0.000Z",
-      "state" : "scheduled",
+      "status" : "scheduled",
       "title" : "Braxgata H1 - Racing Bruxelles H1",
       "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
+      "publicationType": "livestream",
       "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
       "match" : {
          "awayTeam" : {
@@ -90,10 +92,11 @@ token = get(
    },
   {
       "scheduledAt" : "2024-01-30T19:30:0.000Z",
-      "state" : "live",
+      "status" : "active",
       "title" : "Braxgata H1 - Racing Bruxelles H1",
       "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
+      "publicationType": "livestream",
       "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
       "match" : {
          "awayTeam" : {

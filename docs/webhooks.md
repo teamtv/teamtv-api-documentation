@@ -25,6 +25,53 @@ The VideoAdded event is triggered when an upload is initialized. This means a ne
 }
 ```
 
+## Publication.Scheduled
+
+This event is triggered when livestream is scheduled.
+After this Event the Publication will be returned in the [Studio API](/backend_api/studio/) response.
+
+```javascript
+{
+  "eventName": "Publication.Scheduled",
+  "data": {
+    "tenantId": "nl_soccer_fc_bal_op_het_dak",
+    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed",
+    "publicationType": "livestream"
+  }
+}
+```
+
+
+## Publication.Active
+
+This event is triggered when livestream is live.
+
+```javascript
+{
+  "eventName": "Publication.Active",
+  "data": {
+    "tenantId": "nl_soccer_fc_bal_op_het_dak",
+    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed",
+    "publicationType": "livestream"
+  }
+}
+```
+
+
+## Publication.Completed
+
+This event is triggered when livestream ended.
+
+```javascript
+{
+  "eventName": "Publication.Completed",
+  "data": {
+    "tenantId": "nl_soccer_fc_bal_op_het_dak",
+    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed",
+    "publicationType": "livestream"
+  }
+}
+```
 
 ## Publication.Ready
 
@@ -36,7 +83,8 @@ After this Event the Publication will be returned in the [Studio API](/backend_a
   "eventName": "Publication.Ready",
   "data": {
     "tenantId": "nl_soccer_fc_bal_op_het_dak",
-    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed"
+    "publicationId": "02ba96a8-7424-4ba3-877b-2f5533b305ed",
+    "publicationType": "vod"
   }
 }
 ```
