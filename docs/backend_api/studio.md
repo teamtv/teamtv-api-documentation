@@ -51,12 +51,12 @@ token = get(
 ```
 
 
-Get livestreamEvents
+Get livestreams
 
 **Request**
 ```javascript
 token = get(
-   `https://api.teamtvsport.com/api/studio/livestreamEvent`,
+   `https://api.teamtvsport.com/api/studio/livestreams`,
    headers={
       "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
