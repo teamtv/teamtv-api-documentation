@@ -48,3 +48,66 @@ token = get(
    }
 ]
 ```
+
+
+Get livestreamEvents
+
+**Request**
+```javascript
+token = get(
+   `https://api.teamtvsport.com/api/studio/livestreamEvent`,
+   headers={
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${API_TOKEN}`,
+      "X-Resource-Group-Id": clubResourceGroupId
+   }
+)
+```
+
+**Response**
+```json
+[
+   {
+      "scheduledAt" : "2024-06-10T19:30:0.000Z",
+      "state" : "scheduled",
+      "title" : "Braxgata H1 - Racing Bruxelles H1",
+      "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
+      "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
+      "match" : {
+         "awayTeam" : {
+            "name" : "Racing Bruxelles H1",
+            "teamId" : "ab027abc-2af9-4f50-b20d-1234567a"
+         },
+         "homeTeam" : {
+            "name" : "Braxgata H1",
+            "teamId" : "7f76cd68-27f1-11eb-81a1-1234567b"
+         },
+         "name" : "Braxgata H1 - Racing Bruxelles H1",
+         "scheduledAt" : "2022-10-19T14:30:00.000000Z",
+         "sportingEventId" : "5a8e85d1-1b97-4c60-8b24-1234567c"
+      }
+   },
+  {
+      "scheduledAt" : "2024-01-30T19:30:0.000Z",
+      "state" : "live",
+      "title" : "Braxgata H1 - Racing Bruxelles H1",
+      "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
+      "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
+      "match" : {
+         "awayTeam" : {
+            "name" : "Racing Bruxelles H1",
+            "teamId" : "ab027abc-2af9-4f50-b20d-1234567a"
+         },
+         "homeTeam" : {
+            "name" : "Braxgata H1",
+            "teamId" : "7f76cd68-27f1-11eb-81a1-1234567b"
+         },
+         "name" : "Braxgata H1 - Racing Bruxelles H1",
+         "scheduledAt" : "2022-10-19T14:30:00.000000Z",
+         "sportingEventId" : "5a8e85d1-1b97-4c60-8b24-1234567c"
+      }
+   }
+]
+```
