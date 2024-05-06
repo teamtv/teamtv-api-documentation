@@ -69,12 +69,11 @@ token = get(
 ```json
 [
    {
-      "scheduledAt" : "2024-06-10T19:30:0.000Z",
-      "status" : "scheduled",
+      "startTime" : "2024-06-10T19:25:00.000Z",
+      "endTime" : "2024-06-10T21:00:00.000Z",
       "title" : "Braxgata H1 - Racing Bruxelles H1",
       "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
-      "publicationType": "livestream",
       "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
       "match" : {
          "awayTeam" : {
@@ -86,17 +85,16 @@ token = get(
             "teamId" : "7f76cd68-27f1-11eb-81a1-1234567b"
          },
          "name" : "Braxgata H1 - Racing Bruxelles H1",
-         "scheduledAt" : "2022-10-19T14:30:00.000000Z",
+         "scheduledAt" : "2024-01-30T19:25:00.000Z",
          "sportingEventId" : "5a8e85d1-1b97-4c60-8b24-1234567c"
       }
    },
   {
-      "scheduledAt" : "2024-01-30T19:30:0.000Z",
-      "status" : "active",
+      "startTime" : "2024-01-30T19:25:00.000Z",
+      "endTime" :  "2024-01-30T21:00:00.000Z",
       "title" : "Braxgata H1 - Racing Bruxelles H1",
       "embedCode" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2CD9aEjFZwU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "publicationId" : "aaaa-bbbb-cccc-ddddddddd-eeee",
-      "publicationType": "livestream",
       "resourceGroupId" : "8272-2223-aaaa-bbbbbcccccc-ffff",
       "match" : {
          "awayTeam" : {
@@ -108,7 +106,7 @@ token = get(
             "teamId" : "7f76cd68-27f1-11eb-81a1-1234567b"
          },
          "name" : "Braxgata H1 - Racing Bruxelles H1",
-         "scheduledAt" : "2022-10-19T14:30:00.000000Z",
+         "scheduledAt" : "2024-01-30T19:30:00.000Z",
          "sportingEventId" : "5a8e85d1-1b97-4c60-8b24-1234567c"
       }
    }
