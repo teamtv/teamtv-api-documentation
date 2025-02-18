@@ -1,6 +1,9 @@
 # SportingEvent
 
 ### Create new SportingEvent
+
+**Request**
+
 ```javascript
 sportingEvent = post(
    "https://api.teamtvsport.com/api/sportingEvents",
@@ -10,73 +13,110 @@ sportingEvent = post(
       "X-Resource-Group-Id": teamResourceGroupId
    },
    body={
-      "name": "home team - away team",
+      "name": "HomeClub H1 - AwayClub H1",
+      "scheduledAt": "2025-02-18T10:55:54.330Z",
+      "sportType": "hockey",
+      "homeTeamId": "e54b1dd2-ede6-11ef-998c-aaaaaaaaaaaa",
+      "awayTeamId": "b01e42a0-ede7-11ef-a2d7-aaaaaaaeaaaa",
       "type": "match",
-      "scheduledAt": "2020-06-12T13:31:56.735Z" 
-   }
+      "tags": {
+        "matchConfig": {
+          "periodCount": 2,
+          "firstPeriodPlayingDirection": "HOME_AWAY"
+        },
+        "automaticCameraConfig": {
+          "record": false
+        }
+      },
+    }
 )
 ```
-The `sportingEventId` field in the returned `sportingEvent` object is required for further actions with this entity (like uploading, playing video, etc). You need to keep a copy for further usage.
-
-### Add One-time LivestreamEvent to SportingEvent
-
-```javascript
-livestreamEvent = post(
-   `https://api.teamtvsport.com/api/sportingEvents/${sportingEventId}/createLivestreamEvent`,
-   headers={
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${API_TOKEN}`,
-      "X-Resource-Group-Id": teamResourceGroupId
-   },
-   body={
-      "scheduledAt": "now",
-      "broadcastToYoutube": false
-   }
-)
-
-```
-Options for `scheduledAt`:
-
-- `"now"`: this will start the ingestion server right away
-- `"YYYY-MM-DDTHH:mm:ss.sssZ"`: ingestion scheduled at `YYYY-MM-DDTHH:mm:ss.sssZ`
-- default value: same as `sportingEvent.scheduledAt`
-
-When `broadcastToYoutube` is set to `true` (default `false`) a youtube event will be created. `destinations[1].cdn_info.broadcast_id` in the response contains the youtube video id. 
-
 
 **Response**
+
 ```json
 {
-   "livestreamEventId": "11111111-2222-3333-4444-555555555",
-   "videoStreamInputs" : [
-      {
-        ....
-         "streamingKey" : "66b0ac24-e221-11ea-9b8c-1a2c9e2082da",
-         "streamingUrl" : "rtmp://ingest-livestreaming.teamtv.app/live"
-        ....
-      }
-   ],
-   .....
+  "sportingEventId": "b05b488a-ede7-11ef-a8db-aaaaaaaaaaaa",
+  "sportingEventTRN": "trn:sport:sportingevent:b05b488a-ede7-11ef-a8db-aaaaaaaaaaaa",
+  "observationLogId": "b05b4b46-ede7-11ef-9903-aaaaaaaaaaaa",
+  "name": "HomeClub H1 - AwayClub H1",
+  "createdAt": "2025-02-18T11:01:22.528296Z",
+  "scheduledAt": "2025-02-18T10:55:54.330000Z",
+  "videoIds": [],
+  "clocks": {
+    "live": {
+      "clockId": "U1",
+      "synchronizationPoints": []
+    }
+  },
+  "tags": {
+    "matchConfig": {
+      "periodCount": 2,
+      "firstPeriodPlayingDirection": "HOME_AWAY"
+    },
+    "automaticCameraConfig": {
+      "record": false
+    }
+  },
+  "type": "match",
+  "homeTeamId": "e54b1dd2-ede6-11ef-998c-aaaaaaaaaaaa",
+  "awayTeamId": "b01e42a0-ede7-11ef-a2d7-aaaaaaaeaaaa",
+  "lineUpId": "b06cdbcc-ede7-11ef-b15e-aaaaaaaaaaaa"
 }
-
 ```
 
 
+The `sportingEventId` field in the returned `sportingEvent` object is required for further actions with this entity (like uploading, playing video, etc). You need to keep a copy for further usage.
 
-### Stopping a livestream
+### List 
 
-The default behaviour of a livestream is that it will end after 30 minutes of inactivity (not receiving data). When the livestream is ended the upload of the video to the platform is started.
-In case you would like to trigger the upload before the 30 minutes delay, you can manually stop the livestream and trigger the upload.
+**Request**
+
 
 ```javascript
-post(
-   `https://api.teamtvsport.com/livestreaming/livestreamEvents/${livestreamEventId}/stop`,
+sportingEvents = get(
+   "https://api.teamtvsport.com/api/sportingEvents",
    headers={
-      "Content-Type": "application/json",
       "Authorization": `Bearer ${API_TOKEN}`,
       "X-Resource-Group-Id": teamResourceGroupId
-   },
-   body={}
+   }
 )
 ```
+
+**Response**
+
+
+```json
+[
+    {
+      "sportingEventId": "b05b488a-ede7-11ef-a8db-aaaaaaaaaaaa",
+      "sportingEventTRN": "trn:sport:sportingevent:b05b488a-ede7-11ef-a8db-aaaaaaaaaaaa",
+      "observationLogId": "b05b4b46-ede7-11ef-9903-aaaaaaaaaaaa",
+      "name": "HomeClub H1 - AwayClub H1",
+      "createdAt": "2025-02-18T11:01:22.528296Z",
+      "scheduledAt": "2025-02-18T10:55:54.330000Z",
+      "videoIds": [],
+      "clocks": {
+        "live": {
+          "clockId": "U1",
+          "synchronizationPoints": []
+        }
+      },
+      "tags": {
+        "matchConfig": {
+          "periodCount": 2,
+          "firstPeriodPlayingDirection": "HOME_AWAY"
+        },
+        "automaticCameraConfig": {
+          "record": false
+        }
+      },
+      "type": "match",
+      "homeTeamId": "e54b1dd2-ede6-11ef-998c-aaaaaaaaaaaa",
+      "awayTeamId": "b01e42a0-ede7-11ef-a2d7-aaaaaaaeaaaa",
+      "lineUpId": "b06cdbcc-ede7-11ef-b15e-aaaaaaaaaaaa"
+    }
+]
+```
+
 
