@@ -13,7 +13,8 @@ nav:
     - Resources:
       - ResourceGroup: backend_api/resource_group.md
       - Person: backend_api/person.md
-      - Team/Player: backend_api/team.md
+      - Team: backend_api/team.md
+      - Player: backend_api/player.md
       - SportingEvent: backend_api/sporting_event.md
       - Course: backend_api/course.md
     - Integrations:
