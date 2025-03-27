@@ -17,6 +17,7 @@ nav:
       - Player: backend_api/player.md
       - SportingEvent: backend_api/sporting_event.md
       - Course: backend_api/course.md
+      - Sponsor: backend_api/sponsor.md
     - Integrations:
       - EventStream: backend_api/event_stream.md
       - Studio: backend_api/studio.md
