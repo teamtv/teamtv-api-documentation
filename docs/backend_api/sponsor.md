@@ -5,7 +5,7 @@
 **Request**
 
 ```javascript
-team = get(
+sponsors = get(
    "https://api.teamtvsport.com/api/sponsors",
    headers={
       "Content-Type": "application/json",
